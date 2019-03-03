@@ -140,6 +140,7 @@ class Example(QWidget):
 
 
     def changeValue(self, value):
+        """ изменение значения"""
 
         self.c.updateBW.emit(value)
         self.wid.repaint()
