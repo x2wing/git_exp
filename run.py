@@ -7,6 +7,8 @@ from PyQt5.QtWidgets import (QWidget, QSlider, QApplication,
 from PyQt5.QtCore import QObject, Qt, pyqtSignal
 from PyQt5.QtGui import QPainter, QFont, QColor, QPen
 
+from new_dlg import MDialog
+
 
 class Communicate(QObject):
 
@@ -122,6 +124,9 @@ class Example(QWidget):
         self.setWindowTitle('Burning widget')
         ok = QMessageBox.information(self, 'Генератор', "Генерация успешно завершена")
         print(ok)
+
+        dlg = MDialog(self)
+        dlg.show()
         self.show()
 
 
