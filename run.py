@@ -119,6 +119,7 @@ class Example(QWidget):
         hbox = QHBoxLayout()
         hbox.addWidget(self.wid)
         hbox.addWidget(btnLoad)
+        # добавление вертикального лайаута
         vbox = QVBoxLayout()
         vbox.addStretch(1)
         vbox.addLayout(hbox)
