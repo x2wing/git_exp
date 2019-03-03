@@ -17,6 +17,9 @@ class Communicate(QObject):
 
 
 class BurningWidget(QWidget):
+    """
+    кастомный бар
+    """
 
     def __init__(self):
         super().__init__()
