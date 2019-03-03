@@ -3,7 +3,7 @@
 
 import sys
 from PyQt5.QtWidgets import (QWidget, QSlider, QApplication,
-    QHBoxLayout, QVBoxLayout)
+    QHBoxLayout, QVBoxLayout, QMessageBox)
 from PyQt5.QtCore import QObject, Qt, pyqtSignal
 from PyQt5.QtGui import QPainter, QFont, QColor, QPen
 
@@ -120,6 +120,7 @@ class Example(QWidget):
 
         self.setGeometry(300, 300, 390, 210)
         self.setWindowTitle('Burning widget')
+        ok = QMessageBox.information(self, 'Генератор', "Генерация успешно завершена")
         self.show()
 
 
