@@ -3,10 +3,11 @@
 
 import sys
 from PyQt5.QtWidgets import (QWidget, QSlider, QApplication,
-    QHBoxLayout, QVBoxLayout, QMessageBox)
+    QHBoxLayout, QVBoxLayout, QMessageBox, QPushButton)
 from PyQt5.QtCore import QObject, Qt, pyqtSignal
 from PyQt5.QtGui import QPainter, QFont, QColor, QPen
 
+from next_dialog import out_message
 from new_dlg import MDialog
 
 
@@ -111,13 +112,17 @@ class Example(QWidget):
         self.c = Communicate()
         self.wid = BurningWidget()
         self.c.updateBW[int].connect(self.wid.setValue)
+        btnLoad = QPushButton('Load')
+        btnLoad.clicked.connect(out_message)
 
         sld.valueChanged[int].connect(self.changeValue)
         hbox = QHBoxLayout()
         hbox.addWidget(self.wid)
+        hbox.addWidget(btnLoad)
         vbox = QVBoxLayout()
         vbox.addStretch(1)
         vbox.addLayout(hbox)
+
         self.setLayout(vbox)
 
         self.setGeometry(300, 300, 390, 210)
