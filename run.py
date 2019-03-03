@@ -121,6 +121,7 @@ class Example(QWidget):
         self.setGeometry(300, 300, 390, 210)
         self.setWindowTitle('Burning widget')
         ok = QMessageBox.information(self, 'Генератор', "Генерация успешно завершена")
+        print(ok)
         self.show()
 
 
