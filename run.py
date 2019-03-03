@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import (QWidget, QSlider, QApplication,
 from PyQt5.QtCore import QObject, Qt, pyqtSignal
 from PyQt5.QtGui import QPainter, QFont, QColor, QPen
 
+from next_dialog import out_message
 
 class Communicate(QObject):
 
